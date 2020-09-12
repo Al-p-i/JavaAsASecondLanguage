@@ -1,0 +1,183 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "reveal.js",
+        "scope": null,
+        "escapedName": "reveal.js",
+        "name": "reveal.js",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/qwerty/repo/JavaAsASecondLanguage"
+    ]
+  ],
+  "_from": "reveal.js@latest",
+  "_hasShrinkwrap": false,
+  "_id": "reveal.js@4.0.2",
+  "_inCache": true,
+  "_location": "/reveal.js",
+  "_nodeVersion": "13.2.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/reveal.js_4.0.2_1590748002843_0.7192531605421806"
+  },
+  "_npmUser": {
+    "name": "hakimel",
+    "email": "hakim.elhattab@gmail.com"
+  },
+  "_npmVersion": "6.13.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "reveal.js",
+    "scope": null,
+    "escapedName": "reveal.js",
+    "name": "reveal.js",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/reveal.js/-/reveal.js-4.0.2.tgz",
+  "_shasum": "2e5e9f8ed0fa239924b448f21d4238c5aa6e852e",
+  "_shrinkwrap": null,
+  "_spec": "reveal.js",
+  "_where": "/Users/qwerty/repo/JavaAsASecondLanguage",
+  "author": {
+    "name": "Hakim El Hattab",
+    "email": "hakim.elhattab@gmail.com",
+    "url": "https://hakim.se"
+  },
+  "browserslist": "> 0.5%, IE 11, not dead",
+  "bugs": {
+    "url": "https://github.com/hakimel/reveal.js/issues"
+  },
+  "dependencies": {},
+  "description": "The HTML Presentation Framework",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@rollup/plugin-babel": "^5.0.2",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-html-import-to-string": "0.0.1",
+    "colors": "^1.4.0",
+    "core-js": "^3.6.5",
+    "glob": "^7.1.6",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-header": "^2.0.9",
+    "gulp-sass": "^4.0.2",
+    "gulp-tap": "^2.0.0",
+    "gulp-zip": "^5.0.1",
+    "highlight.js": "^10.0.3",
+    "marked": "^1.1.0",
+    "node-qunit-puppeteer": "^2.0.1",
+    "qunit": "^2.10.0",
+    "rollup": "^2.10.9",
+    "rollup-plugin-terser": "^5.3.0",
+    "yargs": "^15.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-LWZSUenufF1gpD7npxJ7KfoQQFKgc1D6XrLTFgKlwWNP1BQ74hT48KONFWMAw+8R/QUeaScCLCLrBVHDfFIEiw==",
+    "shasum": "2e5e9f8ed0fa239924b448f21d4238c5aa6e852e",
+    "tarball": "https://registry.npmjs.org/reveal.js/-/reveal.js-4.0.2.tgz",
+    "fileCount": 62,
+    "unpackedSize": 5321931,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe0ONjCRA9TVsSAnZWagAAj5YQAJH7+ItnQxEH528NSQOj\nawGWZl6QPJp/TiUVgluYPbxEfLufkjAHAqjtF1dtPkGSfmd5AyEcLdgEncP8\n88fO7yKMQnwxN9K+wDZbgU69sYM043I2jNCPuGxztt9StAO5mZBFbyJjATPu\nypQZG1DxBLsl2dUrJNT2owECbcJyrRVXYVzACQUOicdrqjUgOOT/dBRjcolN\nOkJ2080d4f4actr39gzEkT9zdNPZwD831/pdZoAK0C3tTsPhDM85JEj3+79N\ng1L58euLx9gfTSxIH0/hZWzUeQpxNtE84KXbzZxl684QDt5cu9vxznQCwAvm\nYShYrqdqg9V4rtaYJWRjTYJeVqxdtxLl6mYQeVz1B3c8zQaFKsLIA5/q4Vm6\nLAT+x2/Zizdk0ikt3eScohema6ddYLN3uLL0URDRz9tj3Tm5I/8GStuowhLR\nHo9uaaq6z6oRFf3ICXAtlMmFdPNRCSuh5qk4EhexriDKIVtnKrugJhehDGBe\nztFscj7oiT0QaOnYT9vjNac9XXUamUH8jPkhTzvrI744W9H3ZJnRWGG8cGLK\n8gbQ5wBv9mRWuyMhwG494JCcaUmSmMDt6KNueGVl7DPt7tLO/CfOh3xZAlIo\nQRNGdIRFeUsqYjgfml0acp3YQMvF1+Q7/slHcei+sx8ZKoDhXhZCbMxz5a8Y\nw0wT\r\n=JUCv\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
+    },
+    "globals": {
+      "module": false,
+      "console": false,
+      "unescape": false,
+      "define": false,
+      "exports": false
+    },
+    "rules": {
+      "curly": 0,
+      "eqeqeq": 2,
+      "wrap-iife": [
+        2,
+        "any"
+      ],
+      "no-use-before-define": [
+        2,
+        {
+          "functions": false
+        }
+      ],
+      "new-cap": 2,
+      "no-caller": 2,
+      "dot-notation": 0,
+      "no-eq-null": 2,
+      "no-unused-expressions": 0
+    }
+  },
+  "gitHead": "bd19860b4d6e85ff98067546faa4ffd87527a0ba",
+  "homepage": "https://revealjs.com",
+  "keywords": [
+    "reveal",
+    "slides",
+    "presentation"
+  ],
+  "license": "MIT",
+  "main": "dist/reveal.js",
+  "maintainers": [
+    {
+      "name": "hakimel",
+      "email": "hakim.elhattab@gmail.com"
+    }
+  ],
+  "module": "dist/reveal.esm.js",
+  "name": "reveal.js",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hakimel/reveal.js.git"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp serve",
+    "test": "gulp test"
+  },
+  "subdomain": "revealjs",
+  "version": "4.0.2",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">=10.0.0"
+      },
+      "pkgid": "reveal.js@4.0.2"
+    },
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">=10.0.0"
+      },
+      "pkgid": "reveal.js@4.0.2"
+    }
+  ]
+}
