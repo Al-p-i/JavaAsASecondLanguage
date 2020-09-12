@@ -2,6 +2,15 @@
 ### Lecture 01
 
 ---
+## What is Advanced Java?
+
+---
+## Kotlin
+
+---
+## Now serious
+
+---
 ## About me
 - Sergei    
 - Software Engineer
