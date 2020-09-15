@@ -38,7 +38,15 @@
 
 ---
 ## What we will learn
-TODO
+Lecture 1. Basics, git
+Lecture 2. Classes, gradle
+Lecture 3. Collections, Exceptions, Generics
+Lecture 4. Web client, HTTP, REST
+Lecture 5. Web server, Spring, Annotations
+Lecture 6. Databases, SQL, JDBC
+Lecture 7. Basic concurrency, Critical section
+Lecture 8. Basic concurrency, Concurrent data structures
+Lecture 9. GC, Heap
 
 ---
 ## Hrefs
