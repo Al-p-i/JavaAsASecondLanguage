@@ -38,16 +38,16 @@
 
 ---
 ## Plan
-Lecture 1. Basics, git, gradle
-Lecture 2. Classes, OOP
-Lecture 3. Collections, Exceptions, Generics, Streams
-Lecture 4. Web client, HTTP, REST  
-Lecture 5. Web server, Annotations  
-Lecture 6. Java+SQL, JDBC
-Lecture 7. Basic concurrency, Critical section  
-Lecture 8. Basic concurrency, Concurrent data structures  
-Lecture 9. GC, Heap
-Lecture 10. Experiments
+1. Basics, git, gradle
+2. Classes, OOP
+3. Collections, Exceptions, Generics, Streams
+4. Web client, HTTP, REST  
+5. Web server, Annotations  
+6. Java+SQL, JDBC
+7. Basic concurrency, Critical section  
+8. Basic concurrency, Concurrent data structures  
+9. GC, Heap
+10. Experiments
 
 ---
 ## Оценка
@@ -80,7 +80,7 @@ install JDK 14.0.2-adpt
 sdk install 14.0.2-adpt 
 ```
 ---
-#Install IntelliJ IDEA Community
+## Install IntelliJ IDEA Community
 https://www.jetbrains.com/ru-ru/idea/download
 
 ---
