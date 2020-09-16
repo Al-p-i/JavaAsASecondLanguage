@@ -217,16 +217,16 @@ Build and run tests
 ## 2. Clone your fork
 После форка в вашем github появится несинхронизованная копия (**fork**), **склонируем** ее и получим **рабочую копию** форка
 ```bash
-> git clone https://github.com/YOUR_USERNAME/JavaAsASecondLanguage.git
+git clone https://github.com/YOUR_USERNAME/JavaAsASecondLanguage.git
 ```
 
 ---
 ## 3. Connect your working copy with course repository
 2. Свяжем **рабочую копию вашего форка** с **репозиторием курса**, чтобы вы могли их синхронизировать и работать со свежей версией кода и проверим, что это сработало
 ```bash
-> cd atom
-> git remote add upstream https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage.git
-> git remote -v
+cd JavaAsASecondLanguage
+git remote add upstream https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage.git
+git remote -v
 origin  https://github.com/YOUR_USERNAME/JavaAsASecondLanguage.git (fetch)
 origin  https://github.com/YOUR_USERNAME/JavaAsASecondLanguage.git (push)
 upstream https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage.git (fetch)
@@ -314,7 +314,7 @@ git pull --rebase origin master
 ```
 взять новые изменения из **репозитория курса**
 ```shell script
-> git pull --rebase upstream master
+ git pull --rebase upstream master
 ```
 **--rebase** заставляет **git** переносить ваши изменения поверх изменений других людей в этой ветке, которые они сделали, пока вы работали над этой веткой локально  
 (возможны конфликты)
@@ -325,7 +325,7 @@ git pull --rebase origin master
 Редактор по умолчанию - **vim**  
 Для тех, кто не знает, [как выйти из вима](https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor), и пользуется **windows**, простой путь - сделать редактором notepad
 ```bash
-> git config --global core.editor notepad
+git config --global core.editor notepad
 ```
 
 ---
