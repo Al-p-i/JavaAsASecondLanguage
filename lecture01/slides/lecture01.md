@@ -27,17 +27,20 @@
 **Люблю смотреть, как другие работают**  
 
 ---
-## Why Java?
-...
+# Why Java?
 
 ---
 ## Java domain
 - Web applications
 - Middleware (Kafka/Spark/Flink)
 - Android
+- lingua franca
 
 ---
-## Plan
+# Орг информация
+
+---
+## План курса
 1. Basics, git, gradle
 2. Classes, OOP
 3. Collections, Exceptions, Generics, Streams
@@ -46,7 +49,7 @@
 6. Java+SQL, JDBC
 7. Basic concurrency, Critical section  
 8. Basic concurrency, Concurrent data structures  
-9. GC, Heap
+9. GC, Heap, Object layout
 10. Experiments
 
 ---
@@ -60,7 +63,17 @@
   80% ─ 5  
   
 ---
+## Домашние задания
+Все домашние задания сдаются в виде pull request в репозиторий курса
+https://javaasasecondlanguage.github.io/JavaAsASecondLanguage/  
+
+Срок сдачи - до дня следующей лекции
+
+---
 # Setup
+
+^^^
+# что вы хотите получить от курса?
 
 ---
 ## Install JDK 14
@@ -86,11 +99,20 @@ https://www.jetbrains.com/ru-ru/idea/download
 ---
 ## JShell
 
+Playing with Syntax
 ```shell script
 jshell
 ```
 ![JShell](https://i.pinimg.com/originals/49/36/9d/49369d389233522a425f1327d8efecf2.jpg =250x250)
 https://medium.com/swlh/how-to-use-jshell-to-improve-your-java-skills-170557d1d680
+
+---
+## Where to get documentation
+- Oracle official docs
+https://docs.oracle.com/en/java/javase/
+- play with *jshell*
+- Google Style guide
+https://google.github.io/styleguide/javaguide.html
 
 ---
 ## Hello World!
@@ -133,22 +155,27 @@ public class Hello {
 ```
 
 ---
-## jar/.class
+## .class contains bytecode
 project containing several java files will compile to a bunch of .class files.
+
+To link several .class files use -cp option
 ```shell script
 java -cp Class1.class Class2.class
 ```
-allows to add several .class files into *classpath*
-
-*jar* utility can package them into single .jar file (java archive)
 
 ---
-## Gradle
-//TODO
+## .jar contains a bunch of .class file + resources
+The standard form of distribution is *jar* - java archive
+*jar* utility can package them into single .jar file, which can be executed or added to classpath
+
 
 ---
 # Practice 1
 Make pull request with HelloWorld to https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage
+
+---
+## Gradle
+//TODO
 
 ---
 ## 1. Install git
@@ -310,7 +337,3 @@ boolean isPalindrome(String str){}
 ```
 
 ---
-
-## Hrefs
-Official documentation
-https://docs.oracle.com/en/java/javase/14/
