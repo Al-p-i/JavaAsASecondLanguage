@@ -143,6 +143,10 @@ allows to add several .class files into *classpath*
 *jar* utility can package them into single .jar file (java archive)
 
 ---
+## Gradle
+//TODO
+
+---
 # Practice 1
 Make pull request with HelloWorld to https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage
 
@@ -298,15 +302,6 @@ LTS (Long Term Support) version is released each 3 Years. Current LTS release is
 
 Funny Java Usage Statistics (2020)
 https://www.jrebel.com/blog/2020-java-technology-report#JDK-distribution
-
-
----
-## Gradle
-//TODO
-
----
-## Practice 1
-Implement
 
 ---
 ## Practice 2

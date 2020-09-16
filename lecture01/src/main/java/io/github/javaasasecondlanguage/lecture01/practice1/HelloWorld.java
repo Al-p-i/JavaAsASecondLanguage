@@ -1,4 +1,4 @@
-package io.github.javaasasecondlanguage.lecture01;
+package io.github.javaasasecondlanguage.lecture01.practice1;
 
 public class HelloWorld {
     public String getHelloWorld() {
