@@ -34,7 +34,7 @@
 - Web applications
 - Middleware (Kafka/Spark/Flink)
 - Android
-- lingua franca
+- Java is lingua franca
 
 ---
 # Орг информация
@@ -65,30 +65,28 @@
 ---
 ## Домашние задания
 Все домашние задания сдаются в виде pull request в репозиторий курса
-https://javaasasecondlanguage.github.io/JavaAsASecondLanguage/  
+https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage 
 
 Срок сдачи - до дня следующей лекции
 
 ---
 # Setup
 
-^^^
-# что вы хотите получить от курса?
-
 ---
 ## Install JDK 14
-Follow the instructions
+Instructions
 https://sdkman.io/install
 
+---
 ### Mac/Linux example:
 ```shell script
 curl -s "https://get.sdkman.io" | bash
 ```
-open new terminal and check if installation is successful
+- open new terminal and check if installation is successful
 ```shell script
 sdk version
 ```
-install JDK 14.0.2-adpt
+- install JDK 14.0.2-adpt
 ```shell script
 sdk install java 14.0.2-adpt 
 ```
@@ -97,13 +95,18 @@ sdk install java 14.0.2-adpt
 https://www.jetbrains.com/ru-ru/idea/download
 
 ---
+## 1. Install git
+https://git-scm.com/
+
+^^^
+# что вы хотите получить от курса?
+
+
+---
 # Lets practice!
 
 ---
 ## JShell
-
-https://medium.com/swlh/how-to-use-jshell-to-improve-your-java-skills-170557d1d680
-
 ```shell script
 jshell
 ```
@@ -205,13 +208,6 @@ Build and run tests
 ```shell script
 ./gradlew clean check
 ```
-
----
-## 1. Install git
-https://git-scm.com/
-
-Make sure you understand git branches
-https://www.atlassian.com/git/tutorials/using-branches
 
 ---
 ## 2. Fork the repository
@@ -382,8 +378,12 @@ checkout -b practice2 upstream/lecture01
 
 ---
 ## More to learn
+- make sure you understand basic syntax, for example
+https://www.w3schools.com/java/default.asp
 - Walk through JShell
 https://medium.com/swlh/how-to-use-jshell-to-improve-your-java-skills-170557d1d680
+- Make sure you understand git branches
+https://www.atlassian.com/git/tutorials/using-branches
 - JDK 15 is General Availability
 https://openjdk.java.net/projects/jdk/15/
 ---
