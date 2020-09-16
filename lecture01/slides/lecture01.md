@@ -95,7 +95,7 @@ sdk install java 14.0.2-adpt
 https://www.jetbrains.com/ru-ru/idea/download
 
 ---
-## 1. Install git
+## Install git
 https://git-scm.com/
 
 ^^^
@@ -166,8 +166,9 @@ project containing several java files will compile to a bunch of .class files.
 
 To link several .class files use -cp option
 ```shell script
-java -cp Class1.class Class2.class
+java HelloWorld -cp SomeClassINeed.class SomeClassINeed2.class
 ```
+Classpath contains a collection of .class files
 
 ---
 ## .jar contains a bunch of .class file + resources
@@ -176,11 +177,10 @@ The standard form of distribution is *jar* - java archive
 
 
 ---
-# Practice 1
-## make Pull Request to project repository
+## Practice 1. make Pull Request to project repository
 - [ ] Make new branch from lecture01
 ```shell script
-checkout -b practice2 upstream/lecture01
+checkout -b practice1 upstream/lecture01
 ```
 - [ ] Un-ignore tests lecture01/practice1
 - [ ] Fix the code
@@ -210,15 +210,18 @@ Build and run tests
 ```
 
 ---
-## 2. Fork the repository
+## 1. Fork the repository
 https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage
 
 ---
-## 3. Connect your fork with course repository
-1. После форка в вашем github появится несинхронизованная копия (**fork**), **склонируем** ее и получим **рабочую копию** форка
+## 2. Clone your fork
+После форка в вашем github появится несинхронизованная копия (**fork**), **склонируем** ее и получим **рабочую копию** форка
 ```bash
 > git clone https://github.com/YOUR_USERNAME/JavaAsASecondLanguage.git
 ```
+
+---
+## 3. Connect your working copy with course repository
 2. Свяжем **рабочую копию вашего форка** с **репозиторием курса**, чтобы вы могли их синхронизировать и работать со свежей версией кода и проверим, что это сработало
 ```bash
 > cd atom
@@ -233,7 +236,7 @@ upstream https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage.git (pus
 а репозиторий курса - как **upstream** (только что настроили)  
 
 ---
-# Make pull request with practice or homework
+## 4. Make pull request with practice or homework
 
 ^^^
 
@@ -345,7 +348,6 @@ JVM - Java Virtual Machine
 - javadoc - documentation generator
 - javap - .class flie disassembler
 
-//check
 
 ---
 ## Licenses
