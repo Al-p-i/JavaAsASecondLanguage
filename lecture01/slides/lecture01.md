@@ -211,7 +211,7 @@ Build and run tests
 
 ---
 ## 1. Fork the repository
-https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage
+[Course repository](https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage)
 
 ---
 ## 2. Clone your fork
@@ -250,13 +250,16 @@ git checkout -b lecture01 upstream/lecture01
 ```
 ^^^
 ## Make changes and push to your fork
+```shell script
 git pull --rebase upstream lecture01
 //...make your changes
 git add MyFixedFile1.java MyFixedFile2.java
 git commit -m 'Fixed all bugs and added new'
 git push -u origin lecture01
+```
+
 ^^^
-#Make pull request
+# Make pull request
 
 ^^^
 
