@@ -16,7 +16,7 @@
 - Software Engineer
 - [https://github.com/rybalkinsd](https://github.com/rybalkinsd)
 
-**Люблю зеленые билды**  
+- **Люблю зеленые билды**  
 
 ^^^
 ## About me
@@ -24,7 +24,7 @@
 - Software Engineer
 - [https://github.com/Al-p-i](https://github.com/Al-p-i)  
 
-**Люблю смотреть, как другие работают**  
+- **Люблю смотреть, как другие работают**  
 
 ---
 # Why Java?
@@ -95,6 +95,9 @@ sdk install java 14.0.2-adpt
 ---
 ## Install IntelliJ IDEA Community
 https://www.jetbrains.com/ru-ru/idea/download
+
+---
+# Lets practice!
 
 ---
 ## JShell
@@ -171,11 +174,37 @@ The standard form of distribution is *jar* - java archive
 
 ---
 # Practice 1
-Make pull request with HelloWorld to https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage
+## make Pull Request to project repository
+- [ ] Make new branch from lecture01
+```shell script
+checkout -b practice2 upstream/lecture01
+```
+- [ ] Un-ignore tests lecture01/practice1
+- [ ] Fix the code
+- [ ] Make sure tests run successfully with gradle
+- [ ] Make pull request to [project repository](https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage) branch lecture01
 
 ---
 ## Gradle
-//TODO
+- gradle - is a build system
+- gradlew, gradle.bat - standalone gradle distributions, you do not need to install anything
+- lecture01/build.gradle.kts defines build options and dependent libraries
+
+---
+## Gradle how to
+Enter lecture01 directory
+```shell script
+cd ./lecture01
+```
+Build artifacts
+```shell script
+./gradlew clean assemble
+```
+
+Build and run tests
+```shell script
+./gradlew clean check
+```
 
 ---
 ## 1. Install git
@@ -314,27 +343,42 @@ JVM - Java Virtual Machine
 ![JDK/JRE/JDM](https://gitpitch.com/pitchme/cdn/github/rybalkinsd/atom/lecture01/247D7B1E71608DAC7DA101FEA4A15E47DB76572E7B6CCF18EE72259B9FD843A725CBA98C0863316AEEE68A6E3D1AAD5F24CD996A9AE24F6965B66E828F65D3A10B6C056F53B14756197F66A494E7B96831ADBF0F585661AB/lecture01/presentation/assets/img/jdk-jre2.png)
 
 ---
+## Let's look inside your JDK distribution
+- javac - java compiler
+- java - java runtime (JVM)
+- javadoc - documentation generator
+- javap - .class flie disassembler
+
+//check
+
+---
 ## Licenses
 [OpenJDK](https://openjdk.java.net/) - is a free implementation of JDK  
 [Oracle JDK](https://www.oracle.com/ru/java/technologies/javase-downloads.html) - proprietary build based on OpenJDK with additional commercial tools and features. Free for development, paid for production  
 [AdoptOpenJDK](https://adoptopenjdk.net/) - free OpenJDK build supported by Eclipse Foundation  
 There are JDK more builds from different vendors, in most cases it is OpenJDK builds (with support and additional features)  
 
-[HotSpot](https://openjdk.java.net/groups/hotspot/) - implementation of JVM inside OpenJDK project
+[HotSpot](https://openjdk.java.net/groups/hotspot/) - implementation of JVM inside OpenJDK
 
 ---
 ## Versioning
-New version is released each 6 months  
-LTS (Long Term Support) version is released each 3 Years. Current LTS release is Java 11  
+- New version is released each 6 months  
+- LTS (Long Term Support) version is released each 3 Years. Current LTS release is Java 11  
 
-Funny Java Usage Statistics (2020)
+Java Usage Statistics (2020)
 https://www.jrebel.com/blog/2020-java-technology-report#JDK-distribution
 
 ---
 ## Practice 2
-```java
-boolean isPalindrome(String str){}
+## make Pull Request to project repository
+- [ ] Make new branch from lecture01
+```shell script
+checkout -b practice2 upstream/lecture01
 ```
+- [ ] Un-ignore tests lecture01/practice2
+- [ ] Write your solution
+- [ ] Make sure tests run successfully with gradle
+- [ ] Make pull request with to [project repository](https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage) branch lecture01
 
 ---
 ## More to learn
