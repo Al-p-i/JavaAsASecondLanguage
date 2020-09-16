@@ -99,12 +99,12 @@ https://www.jetbrains.com/ru-ru/idea/download
 ---
 ## JShell
 
-Playing with Syntax
+https://medium.com/swlh/how-to-use-jshell-to-improve-your-java-skills-170557d1d680
+
 ```shell script
 jshell
 ```
-![JShell](https://i.pinimg.com/originals/49/36/9d/49369d389233522a425f1327d8efecf2.jpg =250x250)
-https://medium.com/swlh/how-to-use-jshell-to-improve-your-java-skills-170557d1d680
+<img src="https://i.pinimg.com/originals/49/36/9d/49369d389233522a425f1327d8efecf2.jpg" alt="drawing" width="300"/>
 
 ---
 ## Where to get documentation
