@@ -182,10 +182,10 @@ The standard form of distribution is *jar* - java archive
 ```shell script
 checkout -b practice1 upstream/lecture01
 ```
-- [ ] Un-ignore tests lecture01/practice1
-- [ ] Fix the code
-- [ ] Make sure tests run successfully with gradle
-- [ ] Make pull request to [project repository](https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage) branch lecture01
+ [ ] Un-ignore tests lecture01/practice1
+ [ ] Fix the code
+ [ ] Make sure tests run successfully with gradle
+ [ ] Make pull request to [project repository](https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage) branch lecture01
 
 ---
 ## Gradle
@@ -369,14 +369,14 @@ https://www.jrebel.com/blog/2020-java-technology-report#JDK-distribution
 ---
 ## Practice 2
 ## make Pull Request to project repository
-- [ ] Make new branch from lecture01
+ [ ] Make new branch from lecture01
 ```shell script
 checkout -b practice2 upstream/lecture01
 ```
-- [ ] Un-ignore tests lecture01/practice2
-- [ ] Write your solution
-- [ ] Make sure tests run successfully with gradle
-- [ ] Make pull request with to [project repository](https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage) branch lecture01
+ [ ] Un-ignore tests lecture01/practice2
+ [ ] Write your solution
+ [ ] Make sure tests run successfully with gradle
+ [ ] Make pull request with to [project repository](https://github.com/JavaAsASecondLanguage/JavaAsASecondLanguage) branch lecture01
 
 ---
 ## More to learn
