@@ -337,3 +337,9 @@ boolean isPalindrome(String str){}
 ```
 
 ---
+## More to learn
+- Walk through JShell
+https://medium.com/swlh/how-to-use-jshell-to-improve-your-java-skills-170557d1d680
+- JDK 15 is General Availability
+https://openjdk.java.net/projects/jdk/15/
+---
