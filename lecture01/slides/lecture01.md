@@ -103,7 +103,7 @@ https://git-scm.com/
 
 
 ---
-# Lets practice!
+# Lets dive in!
 
 ---
 ## JShell
