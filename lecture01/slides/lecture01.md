@@ -90,7 +90,7 @@ sdk version
 ```
 install JDK 14.0.2-adpt
 ```shell script
-sdk install 14.0.2-adpt 
+sdk install java 14.0.2-adpt 
 ```
 ---
 ## Install IntelliJ IDEA Community
