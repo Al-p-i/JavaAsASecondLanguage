@@ -178,7 +178,7 @@ The standard form of distribution is *jar* - java archive
 
 ---
 ## Practice 1. make Pull Request to project repository
-- [ ] Make new branch from lecture01
+ [ ] Make new branch from lecture01
 ```shell script
 checkout -b practice1 upstream/lecture01
 ```
