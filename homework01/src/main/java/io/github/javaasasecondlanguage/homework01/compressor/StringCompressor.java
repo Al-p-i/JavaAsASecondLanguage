@@ -9,10 +9,10 @@ public class StringCompressor {
      * If the group's length is 1, append the character to s.
      * Otherwise, append the character followed by the group's length.
      * Return a compressed string.
-     *
+     * </p>
      * Follow up:
      * Could you solve it using only O(1) extra space?
-     *
+     * </p>
      * Examples:
      * a -> a
      * aa -> a2
