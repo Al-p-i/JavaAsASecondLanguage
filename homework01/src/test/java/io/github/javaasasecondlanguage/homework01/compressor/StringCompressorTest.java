@@ -1,18 +1,17 @@
 package io.github.javaasasecondlanguage.homework01.compressor;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class CompressorTest {
-    Compressor compressor;
+class StringCompressorTest {
+    StringCompressor compressor;
 
     @BeforeEach
     void setup() {
-        compressor = new Compressor();
+        compressor = new StringCompressor();
     }
 
     @Test

@@ -1,6 +1,6 @@
 package io.github.javaasasecondlanguage.homework01.compressor;
 
-public class Compressor {
+public class StringCompressor {
     /**
      * Given an array of characters, compress it using the following algorithm:
      *
