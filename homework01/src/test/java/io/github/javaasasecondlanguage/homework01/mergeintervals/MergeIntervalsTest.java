@@ -140,13 +140,13 @@ class MergeIntervalsTest {
     @Test
     void sample9() {
         var intervals = new int[][]{
-                new int[]{4, 3},
+                new int[]{3, 4},
                 new int[]{5, 6},
                 new int[]{1, 2}
         };
         var expected = new int[][]{
                 new int[]{1, 2},
-                new int[]{4, 3},
+                new int[]{3, 4},
                 new int[]{5, 6}
         };
         var result = intervalsMerger.merge(intervals);
