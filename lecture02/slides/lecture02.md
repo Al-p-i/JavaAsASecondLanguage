@@ -19,9 +19,9 @@
 ---
 ### Static strong typization
 - Static == compile time
-    + \+ fast runtime
-    + \+ errors in compile time
-    - \- more time on prototyping
+    + fast runtime
+    + errors in compile time
+    - more time on prototyping
 - strong typization - *no strict definition*, example:
     ```java
     long num = 42; // <-- legal
@@ -58,7 +58,7 @@ Be simple, use public class in file
 ---
 ### Instantiation
 ```java
-Player myPlayer = new Player();
+TreeNode node = new TreeNode();
 ```
 
 ---
@@ -78,9 +78,9 @@ Player myPlayer = new Player();
 ```java
 String str = null;
 
-Player player = null;
+TreeNode node = null;
 
-assertFalse(player instanceOf Player); // <-- OK
+assertFalse(nodez instanceOf TreeNode); // <-- OK
 assertFalse(null instanceOf AnyClass); // <-- OK 
 ```
 
@@ -102,17 +102,19 @@ System.out.println(null == null);
 ---
 ### Constructor & `this` keyword
 ```java
-class Player {
-    private int id;
-    private String name;
-    
-    public Player(int id, String name) {
-        this.id = id;
-        this.name = name;
+class TreeNode {
+    private TreeNode left;
+    private TreeNode right;
+    private int value;   
+
+    public TreeNode(TreeNode left, TreeNode right, int value) {
+        this.left = left;
+        this.right = right;
+        this.value = value;
     }
     
-    public Player(int id) {
-        this(id, "NO NAME");
+    public TreeNode(int value) {
+        this(null, null, value);
     }
 }
 ```
@@ -120,30 +122,13 @@ class Player {
 
 
 ---
-### OK, now we have a constructor
- 
-`Player(int id, String name)`
-
-```java
-Player simplePlayer = new Player();
-Player customPlayer = new Player(10, "Niels Bohr");
-```
-
-#### Looks good?
-
----
 ### Default constructor
 
-**NO** default constructor, if any constructor is defined.
-```java
-Player simplePlayer = new Player(); // <-- Compilation error
-```
-
-The default constructor is a no-argument constructor automatically generated **unless** you define any constructor in class.
+**NO** default constructor is generated, if custom constructor is present.
 
 [Read more in official docs](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html)
 
-[Read more on Stackoverflow](http://stackoverflow.com/questions/4488716/java-default-constructor)
+[Read more on Stack Overflow](http://stackoverflow.com/questions/4488716/java-default-constructor)
 
 
 ---
