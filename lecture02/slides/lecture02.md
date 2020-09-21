@@ -41,6 +41,7 @@
 class TreeNode {
     private TreeNode left; 
     private TreeNode right; 
+    private int value;
 }
 ``` 
 
@@ -176,6 +177,9 @@ Titled message **is a** Message
 ---
 ## Java does not support multiple inheritance
 
+---
+## Composition over inheritance
+TODO
 
 ---
 ### Access modifiers
@@ -200,9 +204,12 @@ Titled message **is a** Message
 
 [Read more in official docs](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
 
+---
+## Java modules
+TODO
 
 ---
-### `instanceof` operator
+## `instanceof` operator
 
 ```java
 Message message = new Message();
@@ -212,7 +219,7 @@ assertTrue(message instanceof Message); // <-- OK
 
 
 ---
-### `Object` class #1
+## `Object` class #1
 Everything* is instance of `Object`.
 
 ```java
@@ -225,7 +232,7 @@ assertTrue(message instanceOf Object); // <-- OK
 ```
 
 ---
-### Constructors and inheritance
+## Constructors and inheritance
 
 I want:
 ```java
@@ -234,7 +241,7 @@ TitlesMessage message = new TitledMessage(title, content);
 
 
 ---
-### Constructors and inheritance
+## Constructors and inheritance
 
 ```java
 class Message {
@@ -248,7 +255,7 @@ class Message {
 
 
 ---
-### Constructors and inheritance
+## Constructors and inheritance
 
 ```java
 class TitledMessage extends Message {
@@ -270,7 +277,7 @@ class Message {
 
 
 ---
-### super
+## super
 ```java
 class TitledMessage extends Message {
     private String title;
@@ -292,13 +299,13 @@ class Message {
 
 
 ---
-### What about init order?
+## What about init order?
 
 @See ru.atom.instantiation
 
 
 ---
-### Methods
+## Methods
 Declaration
 ```java
 class Message {
@@ -352,7 +359,7 @@ class Message {
 
 
 ---
-### `static` keyword
+## `static` keyword
 
 static - "common for all class instances"
 
@@ -381,7 +388,7 @@ System.out.println(Utils.DEFAULT_MAX);
 
 
 ---
-### Methods, polymorphism
+## Methods, polymorphism
 ```java
 class TitledMessage extends Message {
     private String title;
@@ -396,7 +403,7 @@ class TitledMessage extends Message {
 
 
 ---
-### Override definition
+## Override definition
 
 Instance method in a subclass with the **same signature** (name, plus the number and the type of its parameters) 
 and **return type** as an instance method in the superclass **overrides** the superclass's method.
@@ -406,13 +413,13 @@ and **return type** as an instance method in the superclass **overrides** the su
 **Note:** `@Override` is **just an annotation to declare** your intentions to override method 
 
 ---
-### Override vs overload note
+## Override vs overload note
 
 **Override** resolves method in **runtime**  
 **Overload** resolves method in **compile-time**
 
 ---
-### `Object` class #2
+## `Object` class #2
 ```java
 class Object {
     public boolean equals(Object obj)
@@ -423,7 +430,7 @@ class Object {
 
 
 ---
-### toString()
+## toString()
 ```java
 class Message {
     private String content;
@@ -436,31 +443,33 @@ class Message {
 ```
 
 ---
-### Two ways to compare objects
+## Two ways to compare objects
 1. **==**  
 Compares that references point to the same object in memory  
 1. **equals()**  
 Custom object equivalence check (by default works as **==**)  
 
 ---
-### equals()
+## equals()
 ```java
-public class Point {
-    private int x;
-    private int y;
+public class TreeNode {
+    private TreeNode left;
+    private TreeNode right;
+
+    private int value;
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Point point = (Point) o;
-        return x == point.x && y == point.y;
+        TreeNode node = (TreeNode) o;
+        return ((TreeNode) o).value == this.value;
     }
 }
 ```
 
 ---
-### Encapsulation wisdom
+## Encapsulation wisdom
 
 ```java
 Message message = new TitledMessage("Awesome title", "Perfect content");
@@ -473,7 +482,7 @@ Use "interface" wherever you can.
 *btw why?*
 
 ---
-### `final` keyword
+## `final` keyword
 
 - constant declaration 
 ```java
@@ -492,31 +501,31 @@ class Message {
 ```
 
 ---
-### Immutable points
+## Immutable TreeNodes
 ```java
-public class Point {
-    private final int x;
-    private final int y;
-}
-```
-NOTE:
-```java
-public class Bar {
-    //does not incur Point immutability, only firstCorner reference
-    private final Point firstCorner;
-    private final Point secondCorner;
+class TreeNode {
+    //Note: final only make reference immutable, not the content
+    private final TreeNode left; 
+    private final TreeNode right; 
+    private final int value;
+    
+    public TreeNode(TreeNode left, TreeNode right, int value) {
+        this.left = left;
+        this.right = right;
+        this.value = value;
+    }
 }
 ```
 
 ---
-### Encapsulation wisdom
+## Encapsulation wisdom
 Use immutable (**final**) where possible  
   
 *btw why?*
 
 
 ---
-### Interface and Abstract class
+## Interface and Abstract class
 1. gradle
 1. Classes and objects  
 1. Inheritance
@@ -526,7 +535,7 @@ Use immutable (**final**) where possible
 
 
 ---
-### `interface` definition
+## `interface` definition
 
 ```java
 interface Storable {
@@ -536,7 +545,7 @@ interface Storable {
 
 
 ---
-### `interface` usage
+## `interface` usage
 
 ```java
 class Message implements Storable {
@@ -560,7 +569,7 @@ assertTrue(smthToSave instanceOf Storable); // <-- OK
 ```
 
 ---
-### Single class - multiple interfaces
+## Single class - multiple interfaces
 
 ```java
 class Message implements Storable, Sendable, Readable {
@@ -569,7 +578,7 @@ class Message implements Storable, Sendable, Readable {
 
 
 ---
-### Interface inheritance
+## Interface inheritance
 
 ```java
 interface FaultTolerantStorable extends Storable, Serializable {
@@ -583,7 +592,7 @@ interface FaultTolerantStorable extends Storable, Serializable {
 ```
 
 ---
-### `abstract` class
+## `abstract` class
 ```java
 public abstract class AbstractHuman {
     protected String name;
@@ -600,7 +609,7 @@ public class Englishman extends AbstractHuman {
 
 
 ---
-### abstract class vs interface
+## abstract class vs interface
 
 |                   | Interface                 | Abstract class                |
 |:----------------- |:--------------------------| :-----------------------------|
@@ -620,7 +629,7 @@ public class Englishman extends AbstractHuman {
 
 
 ---
-### Enum
+## Enum
 ```java
 enum Gender {
     Male,
@@ -632,47 +641,6 @@ enum Gender {
 No inheritance for enums.
 
 Interfaces are allowed.
-
-
----
-### Enum
-
-@See ru.atom.enums 
-
-
----
-### All together now
-```java
-package ru.atom.model.object.actor;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import ru.atom.model.object.GameObject;
-import ru.atom.util.V;
-
-public class Actor extends GameObject implements Tickable {
-    private final static Logger log = LogManager.getLogger(Actor.class);
-    private V velocity;
-
-    @Override
-    public void tick(long time) {
-        V before = position;
-        move(time);
-        log.info("Moved: {} -> {}.", before, position);
-
-    }
-
-    private void move(long time) {
-        position = position.move(velocity.times(time));
-    }
-
-    public final Actor setVelocity(V velocity) {
-        this.velocity = velocity;
-        return this;
-    }
-}
-```
-
 
 ---
 ### packages and import
@@ -693,3 +661,11 @@ final class Message {
 }
 ```
 
+## TIL
+1. Object is root of all java Classes
+1. Java do not have multiple inheritance
+1. Composition over inheritance
+1. Compare objects using equals()
+1. Keep equals(), hashCode() and compareTo() consistent
+1. Use single public class within file where possible
+1. null is dangerous, checking for null is important
