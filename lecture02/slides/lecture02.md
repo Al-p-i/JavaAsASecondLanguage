@@ -36,6 +36,7 @@
 - Everything is an object (except primitives)
 - No code outside class
 
+---
 ## Classes and objects
 1. **[Classes and objects]**
 1. Inheritance
