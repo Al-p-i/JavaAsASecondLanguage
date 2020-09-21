@@ -6,8 +6,10 @@
 ## Agenda
 1. Classes and objects
 1. Inheritance
+1. Class Object
 1. Interface and abstract class
 1. Enum
+1. Java OOP Style
 1. Practice
 
 ---
@@ -34,6 +36,14 @@
 - Everything is an object (except primitives)
 - No code outside class
 
+## Classes and objects
+1. **[Classes and objects]**
+1. Inheritance
+1. Class Object
+1. Interface and abstract class
+1. Enum
+1. Java OOP Style
+1. Practice
 
 ---
 ### `class` Definition
@@ -132,12 +142,13 @@ class TreeNode {
 
 
 ---
-### Inheritance
-1. gradle
-1. Classes and objects  
+## Inheritance
+1. Classes and objects
 1. **[Inheritance]**
-1. Interface and Abstract class
+1. Class Object
+1. Interface and abstract class
 1. Enum
+1. Java OOP Style
 1. Practice
 
 
@@ -202,6 +213,15 @@ Message message = new Message();
 assertTrue(message instanceof Message); // <-- OK
 ```
 
+---
+## Inheritance
+1. Classes and objects
+1. Inheritance
+1. **[Class Object]**
+1. Interface and abstract class
+1. Enum
+1. Java OOP Style
+1. Practice
 
 ---
 ## `Object` class #1
@@ -286,7 +306,7 @@ class Message {
 ---
 ## What about init order?
 
-@See ru.atom.instantiation
+@See instantiation
 
 
 ---
@@ -318,7 +338,7 @@ assertEquals("my content", message.getContent())); // <-- OK
 ---
 ### Methods, overloading
 
-Lets add some "pagination"
+Let's add some "pagination"
 ```java
 class Message {
     private static final int CHARS_PER_PAGE = 256;
@@ -407,9 +427,13 @@ and **return type** as an instance method in the superclass **overrides** the su
 ## `Object` class #2
 ```java
 class Object {
-    public boolean equals(Object obj)
-    public String toString()
-    // o
+    public String toString() {/**/}
+    public boolean equals(Object obj) {/**/}
+    public native int hashCode();
+    public final native Class<?> getClass();
+    protected native Object clone() throws CloneNotSupportedException;
+    protected void finalize() throws Throwable { }
+    //...
 }
 ```
 
@@ -452,6 +476,21 @@ public class TreeNode {
     }
 }
 ```
+---
+## hashCode()
+TODO
+
+---
+## getClass()
+TODO
+
+---
+## clone()
+TODO
+
+---
+## finalize()
+TODO
 
 ---
 ## Encapsulation wisdom
@@ -511,11 +550,12 @@ Use immutable (**final**) where possible
 
 ---
 ## Interface and Abstract class
-1. gradle
-1. Classes and objects  
+1. Classes and objects
 1. Inheritance
-1. **[Interface and Abstract class]**
+1. Class Object
+1. **[Interface and abstract class]**
 1. Enum
+1. Java OOP Style
 1. Practice
 
 
@@ -605,13 +645,14 @@ public class Englishman extends AbstractHuman {
 
 
 ---
-1. gradle
-1. Classes and objects  
+## Enum
+1. Classes and objects
 1. Inheritance
-1. Interface and Abstract class
+1. Class Object
+1. Interface and abstract class
 1. **[Enum]**
+1. Java OOP Style
 1. Practice
-
 
 ---
 ## Enum
