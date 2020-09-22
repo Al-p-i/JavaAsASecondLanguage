@@ -479,19 +479,27 @@ public class TreeNode {
 ```
 ---
 ## hashCode()
-TODO
+Returns hash code of an object
+Must be consistent with equals()
+Does it change?
+What are the requirements for hash code?
 
 ---
 ## getClass()
-TODO
+Reflection allows you to get Class/method/field metadata and analyze it in compile and runtime  
+check java.lang.Class
 
 ---
 ## clone()
-TODO
+Allows you to implement custom copy logic.  
+Is rearly used in real applications  
+Why?  
+Do you know any other options?  
 
 ---
-## finalize()
-TODO
+## ~~finalize~~()
+Is called before object is deleted. Deprecated  
+Do not rely on this method in any practical application
 
 ---
 ## Encapsulation wisdom
