@@ -1,4 +1,4 @@
-package ru.atom.instantiation;
+package io.github.javaasasecondlanguage.lecture02.instantiation;
 
 public class Sub extends Base {
 
@@ -21,5 +21,9 @@ public class Sub extends Base {
     public Sub() {
         // omitted call super() constructor
         System.out.println("Sub: constructor");
+    }
+
+    public static void main(String[] args) {
+        new Sub();
     }
 }

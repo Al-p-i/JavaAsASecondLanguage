@@ -1,4 +1,4 @@
-package io.github.javaasasecondlanguage.lecture02.practice1;
+package io.github.javaasasecondlanguage.lecture02.instantiation;
 
 public class Base {
     private static int integer1 = 1;

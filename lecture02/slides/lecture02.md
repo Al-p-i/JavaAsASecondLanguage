@@ -4,13 +4,15 @@
 
 ---
 ## Agenda
+1. Gradle howto
 1. Classes and objects
+1. Practice 1
 1. Inheritance
 1. Class Object
 1. Interface and abstract class
 1. Enum
 1. Java OOP Style
-1. Practice
+1. Practice 2
 
 ---
 ### Flashback
@@ -38,23 +40,58 @@
 
 ---
 ## Classes and objects
+1. Gradle howto
 1. **[Classes and objects]**
+1. Practice 1
 1. Inheritance
 1. Class Object
 1. Interface and abstract class
 1. Enum
 1. Java OOP Style
-1. Practice
+1. Practice 2
 
 ---
 ### `class` Definition
 ```java
 class TreeNode {
+    TreeNode left; 
+    TreeNode right; 
+    int value;
+}
+``` 
+
+---
+### Java class definition (the industry way)
+```java
+class TreeNode {
     private TreeNode left; 
     private TreeNode right; 
     private int value;
+    public TreeNode getLeft(){
+        return left;
+    }
+    public TreeNode getRight(){
+        return right;
+    }
+    public int getValue(){
+        return value;
+    }
+    public void setLeft(TreeNode left){
+        this.left = left;
+    }
+    public void setRight(TreeNode right){
+        this.right = right;
+    }
+    public void setValue(int value){
+        this.value = value;
+    }
 }
 ``` 
+---
+### Instantiation
+```java
+TreeNode node = new TreeNode();
+```
 
 ---
 ### Where class can be defined
@@ -67,13 +104,30 @@ Be simple, use public class in file
 
 
 ---
-### Instantiation
-```java
-TreeNode node = new TreeNode();
-```
+## Record classes
+Actually half projects are actually consist of "data carriers"  
+classes which are transparent holders for shallowly immutable data  
+So starting from Java 14 we have compact syntax for those cases  
+https://openjdk.java.net/jeps/359
 
 ---
-### Behind the scenes
+## Record class
+```shell script
+record TreeNode(TreeNode left; TreeNode right, int value){}
+``` 
+ 
+---
+## What is generated for record
+- A private final field for each component of the state description;
+- A public read accessor method for each component of the state description, with the same name and type as the component;
+- A public constructor, whose signature is the same as the state description, which initializes each field from the corresponding argument;
+- Implementations of equals and hashCode that say two records are equal if they are of the same type and contain the same state; and
+- An implementation of toString that includes the string representation of all the record components, with their names.
+
+---
+
+## Behind the scenes
+//TODO
 <img src="allocation.png" alt="me" style="width: 750px;"/>
  
 **pOne != pTwo**
@@ -91,7 +145,7 @@ String str = null;
 
 TreeNode node = null;
 
-assertFalse(nodez instanceOf TreeNode); // <-- OK
+assertFalse(node instanceOf TreeNode); // <-- OK
 assertFalse(null instanceOf AnyClass); // <-- OK 
 ```
 
@@ -141,16 +195,21 @@ class TreeNode {
 
 [Read more on Stack Overflow](http://stackoverflow.com/questions/4488716/java-default-constructor)
 
+---
+## Practice 1
+TreeNode
 
 ---
 ## Inheritance
+1. Gradle howto
 1. Classes and objects
-1. **[Inheritance]**
+1. Practice 1
+1. Inheritance
 1. Class Object
 1. Interface and abstract class
 1. Enum
 1. Java OOP Style
-1. Practice
+1. Practice 2
 
 
 ---
@@ -175,17 +234,13 @@ Titled message **is a** Message
 ## Java does not support multiple inheritance
 
 ---
-## Composition over inheritance
-TODO
-
----
 ### Access modifiers
 
 1. **private** - only from class code
     ```java
     private Object topSecret; 
     ```
-1. **default** (package private) - as private + within package
+1. **default** (package) - as private + within package
     ```java
     int number = 42;
     ```
