@@ -6,13 +6,16 @@
 ## Agenda
 1. Gradle howto
 1. Classes and objects
-1. Practice 1
 1. Inheritance
 1. Class Object
 1. Interface and abstract class
+1. Practice 1
 1. Enum
 1. Java OOP Style
 1. Practice 2
+
+---
+## Gradle How To
 
 ---
 ### Flashback
@@ -42,10 +45,10 @@
 ## Classes and objects
 1. Gradle howto
 1. **[Classes and objects]**
-1. Practice 1
 1. Inheritance
 1. Class Object
 1. Interface and abstract class
+1. Practice 1
 1. Enum
 1. Java OOP Style
 1. Practice 2
@@ -110,6 +113,7 @@ classes which are transparent holders for shallowly immutable data
 So starting from Java 14 we have compact syntax for those cases  
 https://openjdk.java.net/jeps/359
 
+[https://openjdk.java.net/jeps/12](It's a preview feature)
 ---
 ## Record class
 ```shell script
@@ -125,8 +129,18 @@ record TreeNode(TreeNode left; TreeNode right, int value){}
 - An implementation of toString that includes the string representation of all the record components, with their names.
 
 ---
+## Records: What is under the hood
 
-## Behind the scenes
+```shell script
+javac TreeNode.java --release 14 --enable-preview
+```
+```shell script
+javap TreeNode.class
+```
+
+---
+
+## What happen when you create an object
 //TODO
 <img src="allocation.png" alt="me" style="width: 750px;"/>
  
@@ -196,17 +210,13 @@ class TreeNode {
 [Read more on Stack Overflow](http://stackoverflow.com/questions/4488716/java-default-constructor)
 
 ---
-## Practice 1
-TreeNode
-
----
 ## Inheritance
 1. Gradle howto
 1. Classes and objects
-1. Practice 1
-1. Inheritance
+1. **[Inheritance]**
 1. Class Object
 1. Interface and abstract class
+1. Practice 1
 1. Enum
 1. Java OOP Style
 1. Practice 2
@@ -258,7 +268,7 @@ Titled message **is a** Message
 
 ---
 ## Java modules
-TODO
+Later in course
 
 ---
 ## `instanceof` operator
@@ -271,13 +281,15 @@ assertTrue(message instanceof Message); // <-- OK
 
 ---
 ## Inheritance
+1. Gradle howto
 1. Classes and objects
 1. Inheritance
 1. **[Class Object]**
 1. Interface and abstract class
+1. Practice 1
 1. Enum
 1. Java OOP Style
-1. Practice
+1. Practice 2
 
 ---
 ## `Object` class #1
@@ -361,8 +373,8 @@ class Message {
 
 ---
 ## What about init order?
-
-@See instantiation
+When you instantiate class with complex inheritance - what will happen in which order  
+@See instantiation example
 
 
 ---
@@ -384,7 +396,7 @@ class Message {
 
 Usage
 ```java
-Message message = new Message("my content");
+var message = new Message("my content");
 message.getContent();
 
 assertTrue(message.getContent().equals("my content"))); // <-- OK
@@ -553,8 +565,9 @@ Do you know any other options?
 
 ---
 ## ~~finalize~~()
-Is called before object is deleted. Deprecated  
-Do not rely on this method in any practical application
+**Deprecated**  
+Is called before object is deleted 
+**Do not rely on this method in any practical application**
 
 ---
 ## Encapsulation wisdom
@@ -614,13 +627,15 @@ Use immutable (**final**) where possible
 
 ---
 ## Interface and Abstract class
+1. Gradle howto
 1. Classes and objects
 1. Inheritance
 1. Class Object
 1. **[Interface and abstract class]**
+1. Practice 1
 1. Enum
 1. Java OOP Style
-1. Practice
+1. Practice 2
 
 
 ---
@@ -707,16 +722,21 @@ public class Englishman extends AbstractHuman {
 | Methods           | public / public static    | no abstract private methods   |
 | Constructors      | no constructors           | no limits                     |
 
+---
+## Practice 1
+QuantTree
 
 ---
 ## Enum
+1. Gradle howto
 1. Classes and objects
 1. Inheritance
 1. Class Object
-1. Interface and abstract class
+1. Interface and abstract class]**
+1. Practice 1
 1. **[Enum]**
 1. Java OOP Style
-1. Practice
+1. Practice 2
 
 ---
 ## Enum
@@ -733,29 +753,43 @@ No inheritance for enums.
 Interfaces are allowed.
 
 ---
-### packages and import
- **Package** is a grouping of related types providing access protection and name space management.
- 
- - make types easier to find and use
- - avoid naming conflicts
- - control access
- 
-Fundamental classes are in java.lang
+## Java OOP Style
+1. Gradle howto
+1. Classes and objects
+1. Inheritance
+1. Class Object
+1. Interface and abstract class]**
+1. Practice 1
+1. Enum
+1. **[Java OOP Style]**
+1. Practice 2
 
-[Read more in official docs](https://docs.oracle.com/javase/tutorial/java/package/packages.html)
+---
+## Java OOP Style
 
-    
-- final class (forbidden inheritance)
-```java
-final class Message {
-}
-```
 
+---
+## Java OOP Style
+1. Gradle howto
+1. Classes and objects
+1. Inheritance
+1. Class Object
+1. Interface and abstract class]**
+1. Practice 1
+1. Enum
+1. Java OOP Style=
+1. **[Practice 2]**
+
+---
+## Practice 2
+IterableTree
+
+---
 ## TIL
-1. Object is root of all java Classes
+1. class "Object" is root of all java Classes
 1. Java do not have multiple inheritance
-1. Composition over inheritance
-1. Compare objects using equals()
+1. Compare objects using equals(), primitives with ==
 1. Keep equals(), hashCode() and compareTo() consistent
 1. Use single public class within file where possible
+1. Composition over inheritance
 1. null is dangerous, checking for null is important
