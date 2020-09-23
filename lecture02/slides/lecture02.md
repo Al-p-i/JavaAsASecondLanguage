@@ -6,10 +6,11 @@
 ## Agenda
 1. Gradle howto
 1. Classes and objects
+1. Comparing objects
 1. Inheritance
-1. Class Object
 1. Interface and abstract class
 1. Practice 1
+1. Class Object
 1. Enum
 1. Java OOP Style
 1. Practice 2
@@ -45,10 +46,11 @@
 ## Classes and objects
 1. Gradle howto
 1. **[Classes and objects]**
+1. Comparing objects
 1. Inheritance
-1. Class Object
 1. Interface and abstract class
 1. Practice 1
+1. Class Object
 1. Enum
 1. Java OOP Style
 1. Practice 2
@@ -64,7 +66,7 @@ class TreeNode {
 ``` 
 
 ---
-### Java class definition (the industry way)
+## Ok in reality
 ```java
 class TreeNode {
     private TreeNode left; 
@@ -93,7 +95,8 @@ class TreeNode {
 ---
 ### Instantiation
 ```java
-TreeNode node = new TreeNode();
+TreeNode node1 = new TreeNode();
+var node2 = new TreeNode();
 ```
 
 ---
@@ -103,17 +106,17 @@ TreeNode node = new TreeNode();
 1. inside other class (**nested class**)
 1. inside method (**inner class**)
   
-Be simple, use public class in file
+Be simple, use single public class in file
 
 
 ---
 ## Record classes
-Actually half projects are actually consist of "data carriers"  
-classes which are transparent holders for shallowly immutable data  
+Real projects actually have many "data carrier" classes  
+"classes which are transparent holders for shallowly immutable data"  
 So starting from Java 14 we have compact syntax for those cases  
 https://openjdk.java.net/jeps/359
 
-[https://openjdk.java.net/jeps/12](It's a preview feature)
+[It's a preview feature](https://openjdk.java.net/jeps/12)
 ---
 ## Record class
 ```shell script
@@ -123,10 +126,10 @@ record TreeNode(TreeNode left; TreeNode right, int value){}
 ---
 ## What is generated for record
 - A private final field for each component of the state description;
-- A public read accessor method for each component of the state description, with the same name and type as the component;
-- A public constructor, whose signature is the same as the state description, which initializes each field from the corresponding argument;
-- Implementations of equals and hashCode that say two records are equal if they are of the same type and contain the same state; and
-- An implementation of toString that includes the string representation of all the record components, with their names.
+- A public read accessor method for each component of the state description
+- A public constructor, whose signature is the same as the state description
+- Implementations of equals and hashCode
+- An implementation of toString
 
 ---
 ## Records: What is under the hood
@@ -141,7 +144,6 @@ javap TreeNode.class
 ---
 
 ## What happen when you create an object
-//TODO
 <img src="allocation.png" alt="me" style="width: 750px;"/>
  
 **pOne != pTwo**
@@ -210,13 +212,41 @@ class TreeNode {
 [Read more on Stack Overflow](http://stackoverflow.com/questions/4488716/java-default-constructor)
 
 ---
+## Comparing objects
+1. Gradle howto
+1. Classes and objects
+1. **[Comparing objects]**
+1. Inheritance
+1. Interface and abstract class
+1. Practice 1
+1. Class Object
+1. Enum
+1. Java OOP Style
+1. Practice 2
+---
+
+## Two ways to compare objects
+1. **==**  
+Compares that references point to the same object in memory  
+1. **equals()**  
+Custom object equivalence check (by default works as **==**) 
+
+---
+## How to check equality?
+- String - String ?
+- int - int ?
+- Integer - Integer ?
+- TreeNode - TreeNode ?
+
+---
 ## Inheritance
 1. Gradle howto
 1. Classes and objects
+1. Comparing objects
 1. **[Inheritance]**
-1. Class Object
 1. Interface and abstract class
 1. Practice 1
+1. Class Object
 1. Enum
 1. Java OOP Style
 1. Practice 2
@@ -267,10 +297,6 @@ Titled message **is a** Message
 [Read more in official docs](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
 
 ---
-## Java modules
-Later in course
-
----
 ## `instanceof` operator
 
 ```java
@@ -278,18 +304,6 @@ Message message = new Message();
 
 assertTrue(message instanceof Message); // <-- OK
 ```
-
----
-## Inheritance
-1. Gradle howto
-1. Classes and objects
-1. Inheritance
-1. **[Class Object]**
-1. Interface and abstract class
-1. Practice 1
-1. Enum
-1. Java OOP Style
-1. Practice 2
 
 ---
 ## `Object` class #1
@@ -492,84 +506,6 @@ and **return type** as an instance method in the superclass **overrides** the su
 **Overload** resolves method in **compile-time**
 
 ---
-## `Object` class #2
-```java
-class Object {
-    public String toString() {/**/}
-    public boolean equals(Object obj) {/**/}
-    public native int hashCode();
-    public final native Class<?> getClass();
-    protected native Object clone() throws CloneNotSupportedException;
-    protected void finalize() throws Throwable { }
-    //...
-}
-```
-
-
----
-## toString()
-```java
-class Message {
-    private String content;
-    
-    @Override
-    public String toString() {
-        return content;
-    }
-}
-```
-
----
-## Two ways to compare objects
-1. **==**  
-Compares that references point to the same object in memory  
-1. **equals()**  
-Custom object equivalence check (by default works as **==**)  
-
----
-## equals()
-```java
-public class TreeNode {
-    private TreeNode left;
-    private TreeNode right;
-
-    private int value;
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        TreeNode node = (TreeNode) o;
-        return ((TreeNode) o).value == this.value;
-    }
-}
-```
----
-## hashCode()
-Returns hash code of an object
-Must be consistent with equals()
-Does it change?
-What are the requirements for hash code?
-
----
-## getClass()
-Reflection allows you to get Class/method/field metadata and analyze it in compile and runtime  
-check java.lang.Class
-
----
-## clone()
-Allows you to implement custom copy logic.  
-Is rearly used in real applications  
-Why?  
-Do you know any other options?  
-
----
-## ~~finalize~~()
-**Deprecated**  
-Is called before object is deleted 
-**Do not rely on this method in any practical application**
-
----
 ## Encapsulation wisdom
 
 ```java
@@ -583,16 +519,21 @@ Use "interface" wherever you can.
 *btw why?*
 
 ---
-## `final` keyword
+## Final
 
-- constant declaration 
+---
+## `final` field
+
+constant declaration 
 ```java
 class Utils {
     public final int DEFAULT_MAX = 0;
 }
 ```
     
-- final method (forbidden override)
+    
+--- 
+## final method (forbidden override)
 ```java
 class Message {
     public final String getContent() { 
@@ -600,6 +541,17 @@ class Message {
     } 
 }
 ```
+---
+## final class (forbidden to override)
+```java
+final class Message {
+    public String getContent() { 
+       return content; 
+    } 
+}
+```
+See Sealed classes in Java15
+https://openjdk.java.net/jeps/360
 
 ---
 ## Immutable TreeNodes
@@ -624,15 +576,15 @@ Use immutable (**final**) where possible
   
 *btw why?*
 
-
 ---
 ## Interface and Abstract class
 1. Gradle howto
 1. Classes and objects
+1. Comparing objects
 1. Inheritance
-1. Class Object
 1. **[Interface and abstract class]**
 1. Practice 1
+1. Class Object
 1. Enum
 1. Java OOP Style
 1. Practice 2
@@ -727,13 +679,104 @@ public class Englishman extends AbstractHuman {
 QuantTree
 
 ---
+---
+## Class Object
+1. Gradle howto
+1. Classes and objects
+1. Comparing objects
+1. Inheritance
+1. Interface and abstract class
+1. Practice 1
+1. **[Class Object]**
+1. Enum
+1. Java OOP Style
+1. Practice 2
+
+---
+## `Object` class #2
+```java
+class Object {
+    public String toString() {/**/}
+    public boolean equals(Object obj) {/**/}
+    public native int hashCode();
+    public final native Class<?> getClass();
+    protected native Object clone() throws CloneNotSupportedException;
+    protected void finalize() throws Throwable { }
+    //...
+}
+```
+---
+## toString()
+```java
+class Message {
+    private String content;
+    
+    @Override
+    public String toString() {
+        return content;
+    }
+}
+```
+
+---
+## Two ways to compare objects
+1. **==**  
+Compares that references point to the same object in memory  
+1. **equals()**  
+Custom object equivalence check (by default works as **==**)  
+
+---
+## equals()
+```java
+public class TreeNode {
+    private TreeNode left;
+    private TreeNode right;
+
+    private int value;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        TreeNode node = (TreeNode) o;
+        return ((TreeNode) o).value == this.value;
+    }
+}
+```
+---
+## hashCode()
+Returns hash code of an object
+Must be consistent with equals()
+Does it change?
+What are the requirements for hash code?
+
+---
+## getClass()
+Reflection allows you to get Class/method/field metadata and analyze it in compile and runtime  
+check java.lang.Class
+
+---
+## clone()
+Allows you to implement custom copy logic.  
+Is rearly used in real applications  
+Why?  
+Do you know any other options?  
+
+---
+## ~~finalize~~()
+**Deprecated**  
+Is called before object is deleted 
+**Do not rely on this method in any practical application**
+
+---
 ## Enum
 1. Gradle howto
 1. Classes and objects
+1. Comparing objects
 1. Inheritance
-1. Class Object
-1. Interface and abstract class]**
+1. Interface and abstract class
 1. Practice 1
+1. Class Object
 1. **[Enum]**
 1. Java OOP Style
 1. Practice 2
@@ -756,28 +799,32 @@ Interfaces are allowed.
 ## Java OOP Style
 1. Gradle howto
 1. Classes and objects
+1. Comparing objects
 1. Inheritance
-1. Class Object
-1. Interface and abstract class]**
+1. Interface and abstract class
 1. Practice 1
+1. Class Object
 1. Enum
 1. **[Java OOP Style]**
 1. Practice 2
 
 ---
 ## Java OOP Style
-
+- Keep it simple
+- Naming matters
+- Composition over inheritance
 
 ---
 ## Java OOP Style
 1. Gradle howto
 1. Classes and objects
+1. Comparing objects
 1. Inheritance
-1. Class Object
-1. Interface and abstract class]**
+1. Interface and abstract class
 1. Practice 1
+1. Class Object
 1. Enum
-1. Java OOP Style=
+1. Java OOP Style
 1. **[Practice 2]**
 
 ---
