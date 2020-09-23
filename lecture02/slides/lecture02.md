@@ -100,6 +100,16 @@ var node2 = new TreeNode();
 ```
 
 ---
+
+## What happen when you create an object
+<img src="allocation.png" alt="me" style="width: 750px;"/>
+ 
+**pOne != pTwo**
+ 
+**pTwo == winner**
+
+
+---
 ### Where class can be defined
 1. Public class in file (only one)
 1. non-public class in file (any number)
@@ -112,7 +122,8 @@ Be simple, use single public class in file
 ---
 ## Record classes
 Real projects actually have many "data carrier" classes  
-"classes which are transparent holders for shallowly immutable data"  
+"classes which are transparent holders for shallowly immutable data"
+    
 So starting from Java 14 we have compact syntax for those cases  
 https://openjdk.java.net/jeps/359
 
@@ -120,20 +131,11 @@ https://openjdk.java.net/jeps/359
 ---
 ## Record class
 ```shell script
-record TreeNode(TreeNode left; TreeNode right, int value){}
+record TreeNode(TreeNode left, TreeNode right, int value){}
 ``` 
- 
----
-## What is generated for record
-- A private final field for each component of the state description;
-- A public read accessor method for each component of the state description
-- A public constructor, whose signature is the same as the state description
-- Implementations of equals and hashCode
-- An implementation of toString
-
 ---
 ## Records: What is under the hood
-
+ 
 ```shell script
 javac TreeNode.java --release 14 --enable-preview
 ```
@@ -141,15 +143,14 @@ javac TreeNode.java --release 14 --enable-preview
 javap TreeNode.class
 ```
 
+ 
 ---
-
-## What happen when you create an object
-<img src="allocation.png" alt="me" style="width: 750px;"/>
- 
-**pOne != pTwo**
- 
-**pTwo == winner**
-
+## What is generated for record
+- A private final field for each component of the state description
+- A public read accessor method for each component of the state description
+- A public constructor, whose signature is the same as the state description
+- Implementations of equals and hashCode
+- An implementation of toString
 
 ---
 ### `null` literal
@@ -164,6 +165,12 @@ TreeNode node = null;
 assertFalse(node instanceOf TreeNode); // <-- OK
 assertFalse(null instanceOf AnyClass); // <-- OK 
 ```
+
+---
+### Null is bad, right?
+Tony Hoare: "null is a billion dollar mistake"
+  
+check java.util.Optional
 
 
 ---
@@ -233,10 +240,11 @@ Custom object equivalence check (by default works as **==**)
 
 ---
 ## How to check equality?
-- String - String ?
-- int - int ?
-- Integer - Integer ?
-- TreeNode - TreeNode ?
+Equals or == ?
+- String ? String 
+- int ? int 
+- Integer ? Integer 
+- TreeNode ? TreeNode 
 
 ---
 ## Inheritance
@@ -267,7 +275,7 @@ class TitledMessage extends Message {
 ```
 Titled message **is a** Message
 
-#### Single class – single superclass
+Single class – single superclass
 
 
 ---
